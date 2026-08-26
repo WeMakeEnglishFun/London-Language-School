@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>London Language School Bagheria | English Courses</title>
+ <title>London Language School Bagheria | Corsi di Inglese</title>
 
-  <meta
-    name="description"
-    content="London Language School in Bagheria. Fun, engaging English courses for children, teenagers and adults. We make English fun!"
-  >
+<meta
+  name="description"
+  content="London Language School a Bagheria. Corsi di inglese coinvolgenti per bambini, ragazzi e adulti. We make English fun!"
+>
 
   <style>
     :root {
@@ -118,7 +118,40 @@
       color: white;
       background: var(--red-dark);
     }
+/* LANGUAGE SWITCHER */
 
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #f1f3f5;
+  padding: 4px;
+  border-radius: 30px;
+  margin-left: 6px;
+}
+
+.lang-btn {
+  border: 0;
+  background: transparent;
+  color: var(--navy);
+  padding: 7px 10px;
+  border-radius: 22px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.lang-btn:hover {
+  background: #ffffff;
+}
+
+.lang-btn.active {
+  background: var(--navy);
+  color: white;
+  box-shadow: 0 2px 7px rgba(2, 29, 66, 0.22);
+}
     .menu-button {
       display: none;
       border: 0;
@@ -677,6 +710,12 @@
         <a href="#about">About Us</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
+
+<div class="language-switcher">
+  <button type="button" class="lang-btn active" data-lang="it">🇮🇹 IT</button>
+<button type="button" class="lang-btn" data-lang="en">🇬🇧 EN</button>
+</div>
+  
         <a
           class="nav-cta"
           href="https://wa.me/393791533754?text=Hello%20London%20Language%20School%2C%20I%27d%20like%20some%20information%20about%20your%20English%20courses."
@@ -1052,18 +1091,294 @@
 
 
   <script>
-    function toggleMenu() {
-      document.getElementById("nav").classList.toggle("open");
-    }
+  function toggleMenu() {
+    document.getElementById("nav").classList.toggle("open");
+  }
 
-    document.querySelectorAll("#nav a").forEach(link => {
-      link.addEventListener("click", () => {
-        document.getElementById("nav").classList.remove("open");
-      });
+  document.querySelectorAll("#nav a").forEach(link => {
+    link.addEventListener("click", () => {
+      document.getElementById("nav").classList.remove("open");
+    });
+  });
+
+  const translations = {
+    it: {
+      nav: ["Home", "Corsi", "Chi Siamo", "Galleria", "Contatti"],
+      whatsappNav: "Scrivici su WhatsApp",
+
+      eyebrow: "Corsi di inglese a Bagheria",
+      heroTitle: 'L’inglese prende <span>vita.</span>',
+      heroText:
+        'Corsi di inglese coinvolgenti e accoglienti per bambini, ragazzi e adulti alla London Language School di Bagheria. <span class="tagline">We make English fun!</span>',
+      trial: "Prenota una lezione di prova",
+      discover: "Scopri i nostri corsi",
+
+      coursesSmall: "I nostri corsi",
+      coursesTitle: "Inglese per ogni età",
+      coursesText:
+        "Impara l’inglese in un ambiente accogliente, pensato per aiutare gli studenti a comunicare con sicurezza e a divertirsi mentre imparano.",
+
+      childrenTitle: "Bambini",
+      childrenText:
+        "Lezioni di inglese divertenti e dinamiche che aiutano i bambini a imparare in modo naturale attraverso comunicazione, giochi e attività coinvolgenti.",
+
+      teensTitle: "Ragazzi",
+      teensText:
+        "Inglese pratico per sviluppare sicurezza, rafforzare le competenze scolastiche e utilizzare la lingua in situazioni reali.",
+
+      adultsTitle: "Adulti",
+      adultsText:
+        "Corsi di inglese orientati alla comunicazione, alla sicurezza e all’uso pratico della lingua nella vita quotidiana, nei viaggi e nel lavoro.",
+
+      aboutBoxTitle: "Molto più della grammatica.",
+      aboutBoxText1:
+        'Vogliamo che gli studenti <strong>usino l’inglese</strong>, si divertano e acquistino sicurezza nel parlare.',
+      aboutBoxText2:
+        "Alla London Language School, le lezioni sono pensate per essere coinvolgenti, positive e memorabili.",
+
+      aboutTitle: "Una scuola locale con la passione per l’inglese.",
+      aboutText1:
+        "London Language School è una scuola di inglese a Bagheria nata da un’idea semplice: si impara meglio quando ci si sente a proprio agio, coinvolti e motivati.",
+      aboutText2:
+        "Che si tratti dei primi passi in inglese o dello sviluppo di competenze comunicative più avanzate, il nostro obiettivo è rendere ogni lezione utile e piacevole.",
+
+      ticks: [
+        "Ambiente accogliente e amichevole",
+        "Lezioni coinvolgenti e comunicative",
+        "Corsi per diverse età e livelli",
+        "A Bagheria"
+      ],
+
+      gallerySmall: "La vita alla London",
+      galleryTitle: "Imparare deve lasciare il segno.",
+      galleryText:
+        "Uno sguardo alle lezioni, alle attività e ai momenti speciali della London Language School.",
+      videoCaption: "Bambini che si divertono durante la lezione 🎉",
+      galleryItems: [
+        "Attività divertenti",
+        "Eventi della scuola",
+        "Progetti creativi",
+        "Imparare insieme",
+        "Momenti speciali"
+      ],
+      galleryNote: "📷 Altre foto in arrivo.",
+
+      ctaTitle: "Pronto a parlare inglese?",
+      ctaText:
+        "Contatta London Language School e scopri il corso più adatto a te.",
+      ctaButton: "Scrivici su WhatsApp",
+
+      contactSmall: "Contattaci",
+      contactTitle: "Vieni a trovarci.",
+      contactText:
+        "Contattaci per informazioni sui corsi, iscrizioni e lezioni di prova.",
+
+      address: "Indirizzo",
+      phone: "Telefono / WhatsApp",
+      email: "Email",
+
+      socialTitle: "Seguici",
+      socialText:
+        "Segui London Language School online per novità, attività, eventi e aggiornamenti.",
+
+      footerLocation: "Bagheria, Sicilia"
+    },
+
+    en: {
+      nav: ["Home", "Courses", "About Us", "Gallery", "Contact"],
+      whatsappNav: "WhatsApp Us",
+
+      eyebrow: "English courses in Bagheria",
+      heroTitle: 'English comes <span>alive.</span>',
+      heroText:
+        'Friendly, engaging English courses for children, teenagers and adults at London Language School in Bagheria. <span class="tagline">We make English fun!</span>',
+      trial: "Book a Trial Lesson",
+      discover: "Discover Our Courses",
+
+      coursesSmall: "Our Courses",
+      coursesTitle: "English for every stage",
+      coursesText:
+        "Learn English in a welcoming environment designed to help students communicate with confidence and enjoy the learning process.",
+
+      childrenTitle: "Children",
+      childrenText:
+        "Fun, active English lessons that encourage children to learn naturally through communication, games and engaging activities.",
+
+      teensTitle: "Teenagers",
+      teensText:
+        "Practical English that builds confidence, strengthens school skills and helps students use the language in real situations.",
+
+      adultsTitle: "Adults",
+      adultsText:
+        "Supportive English courses focused on communication, confidence and useful language for everyday life, travel and work.",
+
+      aboutBoxTitle: "More than grammar.",
+      aboutBoxText1:
+        'We want students to <strong>use English</strong>, enjoy English and feel confident speaking English.',
+      aboutBoxText2:
+        "At London Language School, lessons are designed to be engaging, encouraging and memorable.",
+
+      aboutTitle: "A local school with a passion for English.",
+      aboutText1:
+        "London Language School is an English language school in Bagheria, created around a simple idea: learning works better when students feel comfortable, involved and motivated.",
+      aboutText2:
+        "Whether students are taking their first steps in English or developing more advanced communication skills, our aim is to make every lesson purposeful and enjoyable.",
+
+      ticks: [
+        "Friendly and welcoming environment",
+        "Engaging, communicative lessons",
+        "Courses for different ages and levels",
+        "Located in Bagheria"
+      ],
+
+      gallerySmall: "Life at London",
+      galleryTitle: "Learning should be memorable.",
+      galleryText:
+        "A little look at lessons, activities and special moments from London Language School.",
+      videoCaption: "Kids Having Fun in Lesson 🎉",
+      galleryItems: [
+        "Fun Activities",
+        "School Events",
+        "Creative Projects",
+        "Learning Together",
+        "Special Moments"
+      ],
+      galleryNote: "📷 Photos coming soon.",
+
+      ctaTitle: "Ready to start speaking English?",
+      ctaText:
+        "Contact London Language School and discover the right course for you.",
+      ctaButton: "Message us on WhatsApp",
+
+      contactSmall: "Contact Us",
+      contactTitle: "Come and say hello.",
+      contactText:
+        "Contact us for information about courses, enrolment and trial lessons.",
+
+      address: "Address",
+      phone: "Phone / WhatsApp",
+      email: "Email",
+
+      socialTitle: "Follow the school",
+      socialText:
+        "Follow London Language School online for news, activities, events and updates.",
+
+      footerLocation: "Bagheria, Sicily"
+    }
+  };
+
+  function setLanguage(lang) {
+    const t = translations[lang];
+
+    document.documentElement.lang = lang;
+
+    const navLinks = document.querySelectorAll("#nav > a:not(.nav-cta)");
+    t.nav.forEach((text, i) => {
+      if (navLinks[i]) navLinks[i].textContent = text;
     });
 
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    const navCTA = document.querySelector(".nav-cta");
+    if (navCTA) navCTA.textContent = t.whatsappNav;
+
+    document.querySelector(".eyebrow").textContent = t.eyebrow;
+    document.querySelector(".hero h1").innerHTML = t.heroTitle;
+    document.querySelector(".hero p").innerHTML = t.heroText;
+
+    const heroButtons = document.querySelectorAll(".hero-buttons .button");
+    if (heroButtons[0]) heroButtons[0].textContent = t.trial;
+    if (heroButtons[1]) heroButtons[1].textContent = t.discover;
+
+    const sectionHeadings = document.querySelectorAll(".section-heading");
+
+    sectionHeadings[0].querySelector("small").textContent = t.coursesSmall;
+    sectionHeadings[0].querySelector("h2").textContent = t.coursesTitle;
+    sectionHeadings[0].querySelector("p").textContent = t.coursesText;
+
+    const cards = document.querySelectorAll(".courses .card");
+    cards[0].querySelector("h3").textContent = t.childrenTitle;
+    cards[0].querySelector("p").textContent = t.childrenText;
+
+    cards[1].querySelector("h3").textContent = t.teensTitle;
+    cards[1].querySelector("p").textContent = t.teensText;
+
+    cards[2].querySelector("h3").textContent = t.adultsTitle;
+    cards[2].querySelector("p").textContent = t.adultsText;
+
+    document.querySelector(".about-box h3").textContent = t.aboutBoxTitle;
+
+    const aboutBoxPs = document.querySelectorAll(".about-box p");
+    aboutBoxPs[0].innerHTML = t.aboutBoxText1;
+    aboutBoxPs[1].textContent = t.aboutBoxText2;
+
+    document.querySelector(".about-text h2").textContent = t.aboutTitle;
+
+    const aboutPs = document.querySelectorAll(".about-text > p");
+    aboutPs[0].textContent = t.aboutText1;
+    aboutPs[1].textContent = t.aboutText2;
+
+    document.querySelectorAll(".tick").forEach((el, i) => {
+      el.textContent = t.ticks[i];
+    });
+
+    sectionHeadings[1].querySelector("small").textContent = t.gallerySmall;
+    sectionHeadings[1].querySelector("h2").textContent = t.galleryTitle;
+    sectionHeadings[1].querySelector("p").textContent = t.galleryText;
+
+    const videoCaption = document.querySelector(".video-caption");
+    if (videoCaption) videoCaption.textContent = t.videoCaption;
+
+    document.querySelectorAll(".gallery-item span").forEach((el, i) => {
+      if (t.galleryItems[i]) el.textContent = t.galleryItems[i];
+    });
+
+    const galleryNote = document.querySelector(".gallery-note");
+    if (galleryNote) galleryNote.textContent = t.galleryNote;
+
+    document.querySelector(".cta h2").textContent = t.ctaTitle;
+    document.querySelector(".cta p").textContent = t.ctaText;
+    document.querySelector(".cta .button").textContent = t.ctaButton;
+
+    sectionHeadings[2].querySelector("small").textContent = t.contactSmall;
+    sectionHeadings[2].querySelector("h2").textContent = t.contactTitle;
+    sectionHeadings[2].querySelector("p").textContent = t.contactText;
+
+    const contactLabels = document.querySelectorAll(".contact-row strong");
+    if (contactLabels[0]) contactLabels[0].textContent = t.address;
+    if (contactLabels[1]) contactLabels[1].textContent = t.phone;
+    if (contactLabels[2]) contactLabels[2].textContent = t.email;
+
+    document.querySelector(".social-box h3").textContent = t.socialTitle;
+    document.querySelector(".social-box p").textContent = t.socialText;
+
+    const footerPs = document.querySelectorAll("footer p");
+    if (footerPs[0]) {
+      footerPs[0].innerHTML =
+        "<strong>London Language School</strong><br>" + t.footerLocation;
+    }
+
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+
+    localStorage.setItem("lls-language", lang);
+  }
+
+  document.querySelectorAll(".lang-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      setLanguage(btn.dataset.lang);
+    });
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const savedLanguage = localStorage.getItem("lls-language");
+
+  if (savedLanguage === "en") {
+    setLanguage("en");
+  } else {
+    setLanguage("it");
+  }
+</script>
 
 </body>
 </html>

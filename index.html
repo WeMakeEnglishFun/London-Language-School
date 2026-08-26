@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>London Language School Bagheria | English Courses</title>
+
+  <meta
+    name="description"
+    content="London Language School in Bagheria. Fun, engaging English courses for children, teenagers and adults. We make English fun!"
+  >
+
+  <style>
+    :root {
+      --navy: #062f67;
+      --navy-dark: #031d42;
+      --red: #e53222;
+      --red-dark: #bd2417;
+      --white: #ffffff;
+      --cream: #f7f8fb;
+      --text: #172033;
+      --muted: #637083;
+      --green: #25d366;
+      --shadow: 0 14px 35px rgba(2, 29, 66, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid #e8edf5;
+      backdrop-filter: blur(12px);
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 1.05rem;
+    }
+
+    .brand img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+
+    nav a {
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--red);
+    }
+
+    .nav-cta {
+      background: var(--red);
+      color: white;
+      padding: 11px 17px;
+      border-radius: 30px;
+    }
+
+    .nav-cta:hover {
+      color: white;
+      background: var(--red-dark);
+    }
+
+    .menu-button {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--navy);
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(229,50,34,0.22), transparent 30%),
+        linear-gradient(135deg, #031b3f 0%, #06336f 100%);
+      color: white;
+      padding: 92px 0;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      border: 45px solid rgba(255,255,255,0.05);
+      border-radius: 50%;
+      right: -80px;
+      bottom: -170px;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 7px 13px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #ff5948;
+    }
+
+    .hero p {
+      font-size: 1.18rem;
+      max-width: 670px;
+      color: #e6edf7;
+      margin-bottom: 28px;
+    }
+
+    .tagline {
+      font-style: italic;
+      font-weight: 800;
+      color: white;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 8px;
+      font-weight: 800;
+      transition: 0.2s;
+    }
+
+    .button-red {
+      background: var(--red);
+      color: white;
+    }
+
+    .button-red:hover {
+      background: var(--red-dark);
+      transform: translateY(-2px);
+    }
+
+    .button-white {
+      background: white;
+      color: var(--navy);
+    }
+
+    .button-white:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-logo {
+      background: white;
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    }
+
+    .hero-logo img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: contain;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading small {
+      color: var(--red);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .section-heading h2 {
+      margin-top: 8px;
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin-top: 14px;
+    }
+
+    /* COURSES */
+
+    .courses {
+      background: var(--cream);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      border-top: 5px solid var(--navy);
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-top-color: var(--red);
+    }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      background: #edf3fb;
+      color: var(--navy);
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-box {
+      background: var(--navy);
+      color: white;
+      padding: 42px;
+      border-radius: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-box h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .about-box strong {
+      color: #ff6556;
+    }
+
+    .about-text h2 {
+      color: var(--navy);
+      font-size: 2.6rem;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 17px;
+    }
+
+    .ticks {
+      margin-top: 23px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .tick {
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .tick::before {
+      content: "✓";
+      color: var(--red);
+      font-weight: 900;
+      margin-right: 9px;
+    }
+
+    /* GALLERY */
+
+    .gallery {
+      background: var(--cream);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      min-height: 230px;
+      border-radius: 18px;
+      display: flex;
+      align-items: flex-end;
+      padding: 22px;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 800;
+      overflow: hidden;
+      background:
+        linear-gradient(to top, rgba(2,29,66,0.86), rgba(6,47,103,0.25)),
+        linear-gradient(135deg, #154f91, #e53222);
+    }
+
+    .gallery-note {
+      text-align: center;
+      margin-top: 25px;
+      color: var(--muted);
+    }
+
+    /* CTA */
+
+    .cta {
+      padding: 65px 0;
+      background: var(--red);
+      color: white;
+    }
+
+    .cta-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .cta h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+    }
+
+    .contact-card {
+      background: var(--navy);
+      color: white;
+      padding: 36px;
+      border-radius: 20px;
+    }
+
+    .contact-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 22px;
+    }
+
+    .contact-row {
+      margin-bottom: 19px;
+    }
+
+    .contact-row strong {
+      display: block;
+      color: #ff6556;
+      margin-bottom: 3px;
+    }
+
+    .contact-row a:hover {
+      text-decoration: underline;
+    }
+
+    .social-box {
+      background: var(--cream);
+      padding: 36px;
+      border-radius: 20px;
+    }
+
+    .social-box h3 {
+      color: var(--navy);
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+    }
+
+    .social-box p {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .social-links {
+      display: grid;
+      gap: 12px;
+    }
+
+    .social-link {
+      background: white;
+      border: 1px solid #dce3ed;
+      padding: 15px 18px;
+      border-radius: 10px;
+      font-weight: 800;
+      color: var(--navy);
+      transition: 0.2s;
+    }
+
+    .social-link:hover {
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    /* FLOATING WHATSAPP */
+
+    .whatsapp {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 1.7rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.22);
+      z-index: 999;
+      transition: 0.2s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #02162f;
+      color: #ccd6e4;
+      padding: 35px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      align-items: center;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 860px) {
+      .menu-button {
+        display: block;
+      }
+
+      nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 76px;
+        background: white;
+        padding: 20px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        border-bottom: 1px solid #ddd;
+        display: none;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      .hero-logo {
+        max-width: 440px;
+      }
+
+      .cards,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-inner,
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container navbar">
+
+      <a href="#home" class="brand">
+        <img src="logo.png" alt="London Language School logo">
+        <span>London Language School</span>
+      </a>
+
+      <button class="menu-button" onclick="toggleMenu()" aria-label="Open menu">
+        ☰
+      </button>
+
+      <nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#about">About Us</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a
+          class="nav-cta"
+          href="https://wa.me/393791533754?text=Hello%20London%20Language%20School%2C%20I%27d%20like%20some%20information%20about%20your%20English%20courses."
+          target="_blank"
+        >
+          WhatsApp Us
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div>
+          <div class="eyebrow">English courses in Bagheria</div>
+
+          <h1>
+            English comes <span>alive.</span>
+          </h1>
+
+          <p>
+            Friendly, engaging English courses for children, teenagers and adults
+            at London Language School in Bagheria.
+            <span class="tagline">We make English fun!</span>
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              class="button button-red"
+              href="https://wa.me/393791533754?text=Hello%20London%20Language%20School%2C%20I%27d%20like%20to%20ask%20about%20a%20trial%20lesson."
+              target="_blank"
+            >
+              Book a Trial Lesson
+            </a>
+
+            <a class="button button-white" href="#courses">
+              Discover Our Courses
+            </a>
+
+          </div>
+        </div>
+
+        <div class="hero-logo">
+          <img src="logo.png" alt="London Language School Bagheria">
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- COURSES -->
+    <section class="courses" id="courses">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <small>Our Courses</small>
+          <h2>English for every stage</h2>
+          <p>
+            Learn English in a welcoming environment designed to help students
+            communicate with confidence and enjoy the learning process.
+          </p>
+        </div>
+
+        <div class="cards">
+
+          <article class="card">
+            <div class="card-icon">★</div>
+            <h3>Children</h3>
+            <p>
+              Fun, active English lessons that encourage children to learn naturally
+              through communication, games and engaging activities.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🎓</div>
+            <h3>Teenagers</h3>
+            <p>
+              Practical English that builds confidence, strengthens school skills
+              and helps students use the language in real situations.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">💬</div>
+            <h3>Adults</h3>
+            <p>
+              Supportive English courses focused on communication, confidence
+              and useful language for everyday life, travel and work.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+      <div class="container about-grid">
+
+        <div class="about-box">
+          <h3>More than grammar.</h3>
+          <p>
+            We want students to <strong>use English</strong>, enjoy English
+            and feel confident speaking English.
+          </p>
+          <br>
+          <p>
+            At London Language School, lessons are designed to be engaging,
+            encouraging and memorable.
+          </p>
+        </div>
+
+        <div class="about-text">
+
+          <h2>A local school with a passion for English.</h2>
+
+          <p>
+            London Language School is an English language school in Bagheria,
+            created around a simple idea: learning works better when students
+            feel comfortable, involved and motivated.
+          </p>
+
+          <p>
+            Whether students are taking their first steps in English or developing
+            more advanced communication skills, our aim is to make every lesson
+            purposeful and enjoyable.
+          </p>
+
+          <div class="ticks">
+            <div class="tick">Friendly and welcoming environment</div>
+            <div class="tick">Engaging, communicative lessons</div>
+            <div class="tick">Courses for different ages and levels</div>
+            <div class="tick">Located in Bagheria</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <small>Life at London</small>
+          <h2>Learning should be memorable.</h2>
+          <p>
+            A little look at lessons, activities and special moments from
+            London Language School.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+
+          <div class="gallery-item">
+            <span>Our Lessons</span>
+          </div>
+
+          <div class="gallery-item">
+            <span>Fun Activities</span>
+          </div>
+
+          <div class="gallery-item">
+            <span>School Events</span>
+          </div>
+
+          <div class="gallery-item">
+            <span>Creative Projects</span>
+          </div>
+
+          <div class="gallery-item">
+            <span>Learning Together</span>
+          </div>
+
+          <div class="gallery-item">
+            <span>Special Moments</span>
+          </div>
+
+        </div>
+
+        <p class="gallery-note">
+          📷 Photos coming soon.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta">
+
+      <div class="container cta-inner">
+
+        <div>
+          <h2>Ready to start speaking English?</h2>
+          <p>Contact London Language School and discover the right course for you.</p>
+        </div>
+
+        <a
+          class="button button-white"
+          href="https://wa.me/393791533754?text=Hello%20London%20Language%20School%2C%20I%27d%20like%20more%20information%20about%20your%20courses."
+          target="_blank"
+        >
+          Message us on WhatsApp
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <small>Contact Us</small>
+          <h2>Come and say hello.</h2>
+          <p>
+            Contact us for information about courses, enrolment and trial lessons.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-card">
+
+            <h3>London Language School</h3>
+
+            <div class="contact-row">
+              <strong>Address</strong>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Via+Bernardo+Mattarella+167+Bagheria"
+                target="_blank"
+              >
+                Via Bernardo Mattarella, 167/1 Piano<br>
+                90011 Bagheria PA
+              </a>
+            </div>
+
+            <div class="contact-row">
+              <strong>Phone / WhatsApp</strong>
+              <a href="tel:+393791533754">
+                +39 379 153 3754
+              </a>
+            </div>
+
+            <div class="contact-row">
+              <strong>Email</strong>
+              <a href="mailto:londonlanguageschoolbagheria@gmail.com">
+                londonlanguageschoolbagheria@gmail.com
+              </a>
+            </div>
+
+          </div>
+
+
+          <div class="social-box">
+
+            <h3>Follow the school</h3>
+
+            <p>
+              Follow London Language School online for news, activities,
+              events and updates.
+            </p>
+
+            <div class="social-links">
+
+              <a
+                class="social-link"
+                href="https://www.instagram.com/londonlanguageschoolbagheria/"
+                target="_blank"
+              >
+                📸 Instagram
+              </a>
+
+              <a
+                class="social-link"
+                href="https://www.facebook.com/profile.php?id=61591857424469"
+                target="_blank"
+              >
+                👍 Facebook
+              </a>
+
+              <a
+                class="social-link"
+                href="https://wa.me/393791533754"
+                target="_blank"
+              >
+                💬 WhatsApp
+              </a>
+
+              <a
+                class="social-link"
+                href="mailto:londonlanguageschoolbagheria@gmail.com"
+              >
+                ✉️ Email
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FLOATING WHATSAPP -->
+  <a
+    class="whatsapp"
+    href="https://wa.me/393791533754?text=Hello%20London%20Language%20School!"
+    target="_blank"
+    aria-label="Contact London Language School on WhatsApp"
+    title="WhatsApp us"
+  >
+    ☎
+  </a>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container footer-inner">
+
+      <p>
+        <strong>London Language School</strong><br>
+        Bagheria, Sicily
+      </p>
+
+      <p>
+        We make English fun! 🇬🇧
+      </p>
+
+      <p>
+        © <span id="year"></span> London Language School
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav").classList.toggle("open");
+    }
+
+    document.querySelectorAll("#nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("nav").classList.remove("open");
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

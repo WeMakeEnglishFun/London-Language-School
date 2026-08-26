@@ -510,21 +510,59 @@
       gap: 12px;
     }
 
-    .social-link {
-      background: white;
-      border: 1px solid #dce3ed;
-      padding: 15px 18px;
-      border-radius: 10px;
-      font-weight: 800;
-      color: var(--navy);
-      transition: 0.2s;
-    }
+   .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-weight: 800;
+  color: white;
+  border: none;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-    .social-link:hover {
-      border-color: var(--red);
-      color: var(--red);
-    }
+.social-link svg {
+  width: 26px;
+  height: 26px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
 
+.social-link:hover {
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.20);
+}
+
+/* Instagram */
+.social-link.instagram {
+  background: linear-gradient(
+    45deg,
+    #feda75 0%,
+    #fa7e1e 25%,
+    #d62976 50%,
+    #962fbf 75%,
+    #4f5bd5 100%
+  );
+}
+
+/* Facebook */
+.social-link.facebook {
+  background: #1877f2;
+}
+
+/* WhatsApp */
+.social-link.whatsapp-link {
+  background: #25d366;
+}
+
+/* Email */
+.social-link.email-link {
+  background: #062f67;
+}
     /* FLOATING WHATSAPP */
 
     .whatsapp {
@@ -929,40 +967,44 @@
               events and updates.
             </p>
 
-            <div class="social-links">
+           <div class="social-links">
 
-              <a
-                class="social-link"
-                href="https://www.instagram.com/londonlanguageschoolbagheria/"
-                target="_blank"
-              >
-                📸 Instagram
-              </a>
+  <a class="social-link instagram"
+     href="https://www.instagram.com/londonlanguageschoolbagheria/"
+     target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/>
+    </svg>
+    <span>Instagram</span>
+  </a>
 
-              <a
-                class="social-link"
-                href="https://www.facebook.com/profile.php?id=61591857424469"
-                target="_blank"
-              >
-                👍 Facebook
-              </a>
+  <a class="social-link facebook"
+     href="https://www.facebook.com/profile.php?id=61591857424469"
+     target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v2H6v4h3v7h4v-7h3.2l.8-4H13V9c0-.7.3-1 1-1z"/>
+    </svg>
+    <span>Facebook</span>
+  </a>
 
-              <a
-                class="social-link"
-                href="https://wa.me/393791533754"
-                target="_blank"
-              >
-                💬 WhatsApp
-              </a>
+  <a class="social-link whatsapp-link"
+     href="https://wa.me/393791533754"
+     target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 2a9.8 9.8 0 0 0-8.4 14.9L2 22l5.3-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.9.9-3-.2-.3A8 8 0 1 1 12 20z"/>
+    </svg>
+    <span>WhatsApp</span>
+  </a>
 
-              <a
-                class="social-link"
-                href="mailto:londonlanguageschoolbagheria@gmail.com"
-              >
-                ✉️ Email
-              </a>
+  <a class="social-link email-link"
+     href="mailto:londonlanguageschoolbagheria@gmail.com">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm9 7L3.5 7h17L12 12zm0 2.3L3 9v8h18V9l-9 5.3z"/>
+    </svg>
+    <span>Email</span>
+  </a>
 
-            </div>
+</div>
 
           </div>
 

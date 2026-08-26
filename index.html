@@ -405,7 +405,28 @@
         linear-gradient(to top, rgba(2,29,66,0.86), rgba(6,47,103,0.25)),
         linear-gradient(135deg, #154f91, #e53222);
     }
+.gallery-video {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
 
+.gallery-video iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 480px;
+  border: 0;
+  background: #000;
+}
+
+.video-caption {
+  padding: 16px 18px;
+  color: var(--navy);
+  font-weight: 800;
+  text-align: center;
+}
     .gallery-note {
       text-align: center;
       margin-top: 25px;
@@ -787,9 +808,18 @@
 
         <div class="gallery-grid">
 
-          <div class="gallery-item">
-            <span>Our Lessons</span>
-          </div>
+          <div class="gallery-video">
+  <iframe
+    src="https://www.youtube.com/embed/vXC_BOFhgFk"
+    title="Kids Having Fun in Lesson - London Language School"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+
+  <div class="video-caption">
+    Kids Having Fun in Lesson 🎉
+  </div>
+</div>
 
           <div class="gallery-item">
             <span>Fun Activities</span>

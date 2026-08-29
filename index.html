@@ -1405,9 +1405,9 @@ aboutText2:
       el.textContent = t.ticks[i];
     });
 
-    sectionHeadings[1].querySelector("small").textContent = t.gallerySmall;
-    sectionHeadings[1].querySelector("h2").textContent = t.galleryTitle;
-    sectionHeadings[1].querySelector("p").textContent = t.galleryText;
+    sectionHeadings[0].querySelector("small").textContent = t.gallerySmall;
+    sectionHeadings[0].querySelector("h2").textContent = t.galleryTitle;
+    sectionHeadings[0].querySelector("p").textContent = t.galleryText;
 
     const videoCaption = document.querySelector(".video-caption");
     if (videoCaption) videoCaption.textContent = t.videoCaption;
@@ -1423,9 +1423,9 @@ aboutText2:
     document.querySelector(".cta p").textContent = t.ctaText;
     document.querySelector(".cta .button").textContent = t.ctaButton;
 
-    sectionHeadings[2].querySelector("small").textContent = t.contactSmall;
-    sectionHeadings[2].querySelector("h2").textContent = t.contactTitle;
-    sectionHeadings[2].querySelector("p").textContent = t.contactText;
+    sectionHeadings[1].querySelector("small").textContent = t.contactSmall;
+    sectionHeadings[1].querySelector("h2").textContent = t.contactTitle;
+    sectionHeadings[1].querySelector("p").textContent = t.contactText;
 
     const contactLabels = document.querySelectorAll(".contact-row strong");
     if (contactLabels[0]) contactLabels[0].textContent = t.address;

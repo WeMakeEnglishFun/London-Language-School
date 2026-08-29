@@ -1389,17 +1389,7 @@ aboutText2:
     cards[2].querySelector("h3").textContent = t.adultsTitle;
     cards[2].querySelector("p").textContent = t.adultsText;
 
-    document.querySelector(".about-box h3").textContent = t.aboutBoxTitle;
-
-    const aboutBoxPs = document.querySelectorAll(".about-box p");
-    aboutBoxPs[0].innerHTML = t.aboutBoxText1;
-    aboutBoxPs[1].textContent = t.aboutBoxText2;
-
-    document.querySelector(".about-text h2").textContent = t.aboutTitle;
-
-    const aboutPs = document.querySelectorAll(".about-text > p");
-    aboutPs[0].textContent = t.aboutText1;
-    aboutPs[1].textContent = t.aboutText2;
+   
 
     document.querySelectorAll(".tick").forEach((el, i) => {
       el.textContent = t.ticks[i];

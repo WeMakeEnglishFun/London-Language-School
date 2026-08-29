@@ -357,11 +357,39 @@
 
     /* ABOUT */
 
-    .about-grid {
+    .about-section {
+  background: #ffffff;
+}
+
+.about-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 55px;
+}
+
+.about-header small {
+  color: var(--red);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-header h2 {
+  margin-top: 8px;
+  color: var(--navy);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.1;
+}
+
+.about-header p {
+  color: var(--muted);
+  margin-top: 14px;
+  font-size: 1.05rem;
+}  .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 55px;
-      align-items: center;
+      align-items: start;
     }
 
     .about-box {

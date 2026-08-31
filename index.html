@@ -1482,12 +1482,15 @@ aboutText2:
     if (heroButtons[0]) heroButtons[0].textContent = t.trial;
     if (heroButtons[1]) heroButtons[1].textContent = t.discover;
 
-    const sectionHeadings = document.querySelectorAll(".section-heading");
+  
 
-    sectionHeadings[0].querySelector("small").textContent = t.coursesSmall;
-    sectionHeadings[0].querySelector("h2").textContent = t.coursesTitle;
-    sectionHeadings[0].querySelector("p").textContent = t.coursesText;
-
+    
+const coursesHeading = document.querySelector("#courses .section-heading");
+if (coursesHeading) {
+  coursesHeading.querySelector("small").textContent = t.coursesSmall;
+  coursesHeading.querySelector("h2").textContent = t.coursesTitle;
+  coursesHeading.querySelector("p").textContent = t.coursesText;
+}
     const cards = document.querySelectorAll(".courses .card");
     cards[0].querySelector("h3").textContent = t.childrenTitle;
     cards[0].querySelector("p").textContent = t.childrenText;
@@ -1504,11 +1507,12 @@ aboutText2:
       el.textContent = t.ticks[i];
     });
 
-    sectionHeadings[0].querySelector("small").textContent = t.gallerySmall;
-    sectionHeadings[0].querySelector("h2").textContent = t.galleryTitle;
-    sectionHeadings[0].querySelector("p").textContent = t.galleryText;
-
-    const videoCaption = document.querySelector(".video-caption");
+    const galleryHeading = document.querySelector("#gallery .section-heading");
+if (galleryHeading) {
+  galleryHeading.querySelector("small").textContent = t.gallerySmall;
+  galleryHeading.querySelector("h2").textContent = t.galleryTitle;
+}
+    
     if (videoCaption) videoCaption.textContent = t.videoCaption;
 
     document.querySelectorAll(".gallery-item span").forEach((el, i) => {
@@ -1522,13 +1526,14 @@ aboutText2:
     document.querySelector(".cta p").textContent = t.ctaText;
     document.querySelector(".cta .button").textContent = t.ctaButton;
 
-    sectionHeadings[2].querySelector("small").textContent = t.contactSmall;
-    sectionHeadings[2].querySelector("h2").textContent = t.contactTitle;
-    sectionHeadings[2].querySelector("p").textContent = t.contactText;
+   const contactHeading = document.querySelector("#contact .section-heading");
+if (contactHeading) {
+  contactHeading.querySelector("small").textContent = t.contactSmall;
+  contactHeading.querySelector("h2").textContent = t.contactTitle;
+  contactHeading.querySelector("p").textContent = t.contactText;
+}
 
-    const contactLabels = document.querySelectorAll(".contact-row strong");
-    if (contactLabels[0]) contactLabels[0].textContent = t.address;
-    if (contactLabels[1]) contactLabels[1].textContent = t.phone;
+   
     if (contactLabels[2]) contactLabels[2].textContent = t.email;
 
     document.querySelector(".social-box h3").textContent = t.socialTitle;

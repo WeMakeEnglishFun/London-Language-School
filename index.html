@@ -1357,9 +1357,9 @@ aboutText2:
 "Attività coinvolgenti",
 "Imparare insieme"
       ],
-      galleryNote: "📷 Altre foto in arrivo.",
 
-     
+
+     ctaTitle: "Pronto a parlare inglese davvero?",
       ctaText:
         "Contatta London Language School e scopri il corso più adatto a te.",
       ctaButton: "Scrivici su WhatsApp",
@@ -1437,9 +1437,9 @@ aboutText2:
 "Engaging activities",
 "Learning together"
       ],
-      galleryNote: "📷 Photos coming soon.",
+    
 
-   
+   ctaTitle: "Ready to start speaking English?",
       ctaText:
         "Contact London Language School and discover the right course for you.",
       ctaButton: "Message us on WhatsApp",
@@ -1512,15 +1512,14 @@ if (galleryHeading) {
   galleryHeading.querySelector("small").textContent = t.gallerySmall;
   galleryHeading.querySelector("h2").textContent = t.galleryTitle;
 }
-    
+    const videoCaption = document.querySelector(".video-caption");
     if (videoCaption) videoCaption.textContent = t.videoCaption;
 
     document.querySelectorAll(".gallery-item span").forEach((el, i) => {
       if (t.galleryItems[i]) el.textContent = t.galleryItems[i];
     });
 
-    const galleryNote = document.querySelector(".gallery-note");
-    if (galleryNote) galleryNote.textContent = t.galleryNote;
+    
 
     document.querySelector(".cta h2").textContent = t.ctaTitle;
     document.querySelector(".cta p").textContent = t.ctaText;
@@ -1534,7 +1533,7 @@ if (contactHeading) {
 }
 
    
-    if (contactLabels[2]) contactLabels[2].textContent = t.email;
+ 
 
     document.querySelector(".social-box h3").textContent = t.socialTitle;
     document.querySelector(".social-box p").textContent = t.socialText;

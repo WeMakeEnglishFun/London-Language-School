@@ -254,6 +254,11 @@
   font-weight: 700;
 }
 
+.google-proof:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+
     .cambridge-badge {
   margin: 16px 0 18px;
 }
@@ -532,6 +537,151 @@
       margin-top: 25px;
       color: var(--muted);
     }
+
+
+    /* STUDY ABROAD */
+
+    .study-abroad {
+      background:
+        radial-gradient(circle at 85% 20%, rgba(229,50,34,0.18), transparent 28%),
+        linear-gradient(135deg, #031d42 0%, #06336f 100%);
+      color: white;
+    }
+
+    .study-abroad-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .study-abroad small {
+      color: #ff6556;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .study-abroad h2 {
+      font-size: clamp(2.1rem, 4vw, 3.3rem);
+      line-height: 1.08;
+      margin: 10px 0 18px;
+    }
+
+    .study-abroad p {
+      color: #e6edf7;
+      margin-bottom: 18px;
+      max-width: 720px;
+    }
+
+    .study-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .study-point {
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.16);
+      padding: 15px 16px;
+      border-radius: 14px;
+      font-weight: 700;
+    }
+
+    .study-abroad-card {
+      background: white;
+      color: var(--navy);
+      padding: 30px;
+      border-radius: 24px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.22);
+    }
+
+    .study-abroad-card h3 {
+      font-size: 1.55rem;
+      margin-bottom: 10px;
+    }
+
+    .study-abroad-card p {
+      color: var(--muted);
+    }
+
+    .study-abroad-card .button {
+      margin-top: 8px;
+    }
+
+    /* REVIEWS */
+
+    .reviews {
+      background: #ffffff;
+    }
+
+    .reviews-panel {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .reviews-score {
+      background: var(--navy);
+      color: white;
+      padding: 34px;
+      border-radius: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .reviews-score .big-score {
+      font-size: 3.8rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .reviews-score .stars {
+      color: #fbbc04;
+      letter-spacing: 2px;
+      font-size: 1.35rem;
+      margin: 10px 0;
+    }
+
+    .reviews-score p {
+      color: #dce7f4;
+      margin-bottom: 18px;
+    }
+
+    .reviews-message {
+      background: var(--cream);
+      border-radius: 22px;
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .reviews-message h3 {
+      color: var(--navy);
+      font-size: 1.7rem;
+      margin-bottom: 12px;
+    }
+
+    .reviews-message p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: 860px) {
+      .study-abroad-grid,
+      .reviews-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .study-points {
+        grid-template-columns: 1fr;
+      }
+    }
+
 
     /* CTA */
 
@@ -840,11 +990,14 @@
   pensate per sviluppare sicurezza, speaking e comunicazione reale.
   <span class="tagline">English comes alive.</span>
 </p>
-<div class="google-proof">
+<a class="google-proof"
+   href="https://www.google.com/maps/search/?api=1&query=London+Language+School+Via+Bernardo+Mattarella+167%2F1+Bagheria"
+   target="_blank" rel="noopener"
+   aria-label="Leggi le recensioni di London Language School su Google">
   <span class="google-stars">★★★★★</span>
   <strong>5.0 su Google</strong>
-  <span>· 40 recensioni</span>
-</div>
+  <span>· 40 recensioni · Leggi le recensioni →</span>
+</a>
           <div class="cambridge-badge">
  <img src="WhatsApp Image 2026-09-01 at 17.37.33.jpeg" alt="Cambridge English Preparation Centre">
 </div>
@@ -964,6 +1117,47 @@
             </p>
           </article>
 
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- STUDY ABROAD -->
+    <section class="study-abroad" id="study-abroad">
+      <div class="container study-abroad-grid">
+
+        <div>
+          <small>English beyond the classroom</small>
+          <h2 class="study-abroad-title">Vivi l’inglese nel Regno Unito.</h2>
+          <p class="study-abroad-text">
+            Grazie alla nostra collaborazione con ELAC Study Vacations,
+            possiamo offrire opportunità di soggiorno studio nel Regno Unito:
+            lezioni di inglese, attività, escursioni e un ambiente internazionale
+            per usare la lingua anche fuori dall’aula.
+          </p>
+
+          <div class="study-points">
+            <div class="study-point study-point-1">🇬🇧 Esperienza nel Regno Unito</div>
+            <div class="study-point study-point-2">💬 Inglese in situazioni reali</div>
+            <div class="study-point study-point-3">🌍 Ambiente internazionale</div>
+            <div class="study-point study-point-4">🎓 ELAC accreditata British Council</div>
+          </div>
+        </div>
+
+        <div class="study-abroad-card">
+          <h3 class="study-card-title">Porta il tuo inglese fuori dall’aula.</h3>
+          <p class="study-card-text">
+            Un soggiorno studio può trasformare l’inglese in un’esperienza reale:
+            nuove persone, nuovi luoghi e tante occasioni per comunicare.
+          </p>
+
+          <a class="button button-red study-card-button"
+             href="https://elac.co.uk/"
+             target="_blank" rel="noopener">
+            Scopri ELAC Study Vacations
+          </a>
         </div>
 
       </div>
@@ -1138,6 +1332,45 @@ impari a parlarlo, capirlo e usarlo davvero.
         </div>
 
         
+
+      </div>
+    </section>
+
+
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+
+        <div class="section-heading">
+          <small class="reviews-small">Le opinioni dei nostri studenti</small>
+          <h2 class="reviews-title">Cosa dicono di noi</h2>
+          <p class="reviews-intro">
+            La fiducia delle famiglie e degli studenti è una delle cose più importanti per noi.
+          </p>
+        </div>
+
+        <div class="reviews-panel">
+          <div class="reviews-score">
+            <div class="big-score">5.0</div>
+            <div class="stars">★★★★★</div>
+            <p class="reviews-score-text">40 recensioni su Google</p>
+
+            <a class="button button-red reviews-button"
+               href="https://www.google.com/maps/search/?api=1&query=London+Language+School+Via+Bernardo+Mattarella+167%2F1+Bagheria"
+               target="_blank" rel="noopener">
+              Leggi tutte le recensioni
+            </a>
+          </div>
+
+          <div class="reviews-message">
+            <h3 class="reviews-message-title">Vuoi sapere cosa pensano davvero i nostri studenti?</h3>
+            <p class="reviews-message-text">
+              Clicca per leggere le recensioni complete e le esperienze condivise
+              da chi ha già studiato con noi.
+            </p>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -1396,7 +1629,31 @@ aboutText2:
       socialText:
         "Segui London Language School online per novità, attività, eventi e aggiornamenti.",
 
-      footerLocation: "Bagheria, Sicilia"
+      footerLocation: "Bagheria, Sicilia",
+
+      studyAbroadTitle: "Vivi l’inglese nel Regno Unito.",
+      studyAbroadText:
+        "Grazie alla nostra collaborazione con ELAC Study Vacations, possiamo offrire opportunità di soggiorno studio nel Regno Unito: lezioni di inglese, attività, escursioni e un ambiente internazionale per usare la lingua anche fuori dall’aula.",
+      studyPoints: [
+        "🇬🇧 Esperienza nel Regno Unito",
+        "💬 Inglese in situazioni reali",
+        "🌍 Ambiente internazionale",
+        "🎓 ELAC accreditata British Council"
+      ],
+      studyCardTitle: "Porta il tuo inglese fuori dall’aula.",
+      studyCardText:
+        "Un soggiorno studio può trasformare l’inglese in un’esperienza reale: nuove persone, nuovi luoghi e tante occasioni per comunicare.",
+      studyCardButton: "Scopri ELAC Study Vacations",
+
+      reviewsSmall: "Le opinioni dei nostri studenti",
+      reviewsTitle: "Cosa dicono di noi",
+      reviewsIntro:
+        "La fiducia delle famiglie e degli studenti è una delle cose più importanti per noi.",
+      reviewsScoreText: "40 recensioni su Google",
+      reviewsButton: "Leggi tutte le recensioni",
+      reviewsMessageTitle: "Vuoi sapere cosa pensano davvero i nostri studenti?",
+      reviewsMessageText:
+        "Clicca per leggere le recensioni complete e le esperienze condivise da chi ha già studiato con noi."
     },
 
     en: {
@@ -1476,7 +1733,31 @@ aboutText2:
       socialText:
         "Follow London Language School online for news, activities, events and updates.",
 
-      footerLocation: "Bagheria, Sicily"
+      footerLocation: "Bagheria, Sicily",
+
+      studyAbroadTitle: "Live English in the UK.",
+      studyAbroadText:
+        "Through our collaboration with ELAC Study Vacations, we can offer UK study-vacation opportunities combining English lessons, activities, excursions and an international environment where students can use English beyond the classroom.",
+      studyPoints: [
+        "🇬🇧 Experience life in the UK",
+        "💬 Use English in real situations",
+        "🌍 International environment",
+        "🎓 British Council-accredited ELAC"
+      ],
+      studyCardTitle: "Take your English beyond the classroom.",
+      studyCardText:
+        "A study vacation can turn English into a real experience: new people, new places and many opportunities to communicate.",
+      studyCardButton: "Discover ELAC Study Vacations",
+
+      reviewsSmall: "What our students say",
+      reviewsTitle: "Our Google reviews",
+      reviewsIntro:
+        "The trust of our students and families is one of the things we value most.",
+      reviewsScoreText: "40 Google reviews",
+      reviewsButton: "Read all reviews",
+      reviewsMessageTitle: "Want to know what our students really think?",
+      reviewsMessageText:
+        "Click to read the full reviews and experiences shared by people who have already studied with us."
     }
   };
 
@@ -1530,6 +1811,7 @@ if (coursesHeading) {
 if (galleryHeading) {
   galleryHeading.querySelector("small").textContent = t.gallerySmall;
   galleryHeading.querySelector("h2").textContent = t.galleryTitle;
+  galleryHeading.querySelector("p").textContent = t.galleryText;
 }
     const videoCaption = document.querySelector(".video-caption");
     if (videoCaption) videoCaption.textContent = t.videoCaption;
@@ -1539,6 +1821,48 @@ if (galleryHeading) {
     });
 
     
+
+
+    const studyTitle = document.querySelector(".study-abroad-title");
+    if (studyTitle) studyTitle.textContent = t.studyAbroadTitle;
+
+    const studyText = document.querySelector(".study-abroad-text");
+    if (studyText) studyText.textContent = t.studyAbroadText;
+
+    document.querySelectorAll(".study-point").forEach((el, i) => {
+      if (t.studyPoints && t.studyPoints[i]) el.textContent = t.studyPoints[i];
+    });
+
+    const studyCardTitle = document.querySelector(".study-card-title");
+    if (studyCardTitle) studyCardTitle.textContent = t.studyCardTitle;
+
+    const studyCardText = document.querySelector(".study-card-text");
+    if (studyCardText) studyCardText.textContent = t.studyCardText;
+
+    const studyCardButton = document.querySelector(".study-card-button");
+    if (studyCardButton) studyCardButton.textContent = t.studyCardButton;
+
+    const reviewsSmall = document.querySelector(".reviews-small");
+    if (reviewsSmall) reviewsSmall.textContent = t.reviewsSmall;
+
+    const reviewsTitle = document.querySelector(".reviews-title");
+    if (reviewsTitle) reviewsTitle.textContent = t.reviewsTitle;
+
+    const reviewsIntro = document.querySelector(".reviews-intro");
+    if (reviewsIntro) reviewsIntro.textContent = t.reviewsIntro;
+
+    const reviewsScoreText = document.querySelector(".reviews-score-text");
+    if (reviewsScoreText) reviewsScoreText.textContent = t.reviewsScoreText;
+
+    const reviewsButton = document.querySelector(".reviews-button");
+    if (reviewsButton) reviewsButton.textContent = t.reviewsButton;
+
+    const reviewsMessageTitle = document.querySelector(".reviews-message-title");
+    if (reviewsMessageTitle) reviewsMessageTitle.textContent = t.reviewsMessageTitle;
+
+    const reviewsMessageText = document.querySelector(".reviews-message-text");
+    if (reviewsMessageText) reviewsMessageText.textContent = t.reviewsMessageText;
+
 
     document.querySelector(".cta h2").textContent = t.ctaTitle;
     document.querySelector(".cta p").textContent = t.ctaText;
